@@ -1,0 +1,66 @@
+/* Stil general pentru fundalul paginii */
+body {
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Containerul listei */
+.todo-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titlul */
+.todo-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Lista de taskuri */
+.todo-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Fiecare task */
+.todo-container li {
+    margin: 10px 0;
+    padding: 10px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Inputul */
+.todo-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Butoanele */
+.todo-container button {
+    margin-left: 4px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.todo-container button:hover {
+    background-color: #2980b9;
+}
