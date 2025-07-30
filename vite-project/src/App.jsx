@@ -6,6 +6,7 @@ import HomePage from './Pages/HomePage/HomePage.jsx'
 import ShoppingList from "./Pages/ShoppingList/ShoppingList.jsx"
 import BMICalculator from "./Pages/BMICalculator/BMICalculator.jsx"
 import ColorPicker from "./Pages/ColorPicker/ColorPicker.jsx"
+import Counter from "./Pages/Counter/Counter.jsx"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,7 @@ function App() {
             <Route path='/shoppinglist' element={<ShoppingList/>}/>
             <Route path='/bmicalculator' element={<BMICalculator/>}/>
             <Route path='/colorpicker' element={<ColorPicker/>} />
+            <Route path='/counter' element={<Counter/>}/>
         </Routes>
       </BrowserRouter>
     </>

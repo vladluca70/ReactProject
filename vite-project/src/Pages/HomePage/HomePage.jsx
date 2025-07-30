@@ -22,6 +22,9 @@ function HomePage() {
         <Link className="homepage-link" to="/colorpicker">
           Color Picker
         </Link>
+        <Link className="homepage-link" to={"/counter"}>
+          Counter
+        </Link>
         
       </nav>
     </main>
