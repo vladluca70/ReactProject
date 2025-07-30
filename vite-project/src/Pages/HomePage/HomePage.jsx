@@ -9,6 +9,7 @@ function HomePage() {
       <hr className="homepage-divider" />
 
       <nav className="homepage-links">
+
         <Link className="homepage-link" to="/todolist">
           To Do List App
         </Link>
@@ -21,6 +22,7 @@ function HomePage() {
         <Link className="homepage-link" to="/colorpicker">
           Color Picker
         </Link>
+        
       </nav>
     </main>
   );
