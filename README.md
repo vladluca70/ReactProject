@@ -13,10 +13,12 @@ The portfolio includes the following projects:
 - **BMI Calculator** — Calculate Body Mass Index with user inputs.
 - **To Do List** — Manage daily tasks with add and remove functionality.
 - **Shopping List** — Keep track of items to buy with a simple interface.
+- **Counter** — A simple counter app demonstrating state changes.
+- **Notes** — A notes app that saves user input persistently.
 
 ## 🛠 Technologies Used
 
-- **React** — For building UI components and managing state. I used hooks like `useState()` to manage component state.
+- **React** — For building UI components and managing state. I used hooks like `useState()` and `useEffect()` to handle state and side effects. I also leveraged `localStorage` to persist data across sessions, especially in projects like Notes and To Do List.
 - **React Router** — For navigation between project pages using `<BrowserRouter>`, `<Routes>`, `<Route>`, and `<Link>`.
 - **JavaScript, HTML, CSS** — Core web technologies for structure, styling, and logic.
 - **Vite** — A fast and modern build tool for React development.
@@ -27,11 +29,10 @@ The codebase is organized into separate folders for each project and related ass
 
 ## 🌟 Final Thoughts
 
-This collection represents an important step in my learning path, helping me grow from basic JavaScript and HTML/CSS towards mastering React's component-driven architecture and routing features.
+This collection represents an important step in my learning path, helping me grow from basic JavaScript and HTML/CSS towards mastering React's component-driven architecture, hooks like `useEffect()`, and routing features.
 
 Feel free to explore the code, try out the projects, and share your feedback or suggestions!
 
 ---
 
 📫 Thanks for visiting — I hope you find the projects useful or inspiring!
-
