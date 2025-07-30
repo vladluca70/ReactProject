@@ -10,7 +10,8 @@ function HomePage()
 
             <Link to={'/todolist'} >To Do List App</Link> <br/>
             <Link to={'/shoppinglist'}>Shopping List App</Link> <br/>
-            <Link to={'bmicalculator'}>BMI Calculator</Link> <br/>
+            <Link to={'/bmicalculator'}>BMI Calculator</Link> <br/>
+            <Link to={'/colorpicker'}>Color Picker</Link>
         </>
     );
 }
