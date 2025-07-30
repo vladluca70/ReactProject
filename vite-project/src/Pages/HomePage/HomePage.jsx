@@ -1,19 +1,29 @@
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
-function HomePage()
-{
-    return(
-        <>
-            <h1>Welcome to my page</h1>
-            <p>Here you can find a lot of apps</p>
-            <hr/>
+function HomePage() {
+  return (
+    <main className="homepage-container">
+      <h1 className="homepage-title">Welcome to my page</h1>
+      <p className="homepage-description">Here you can find a lot of apps</p>
+      <hr className="homepage-divider" />
 
-            <Link to={'/todolist'} >To Do List App</Link> <br/>
-            <Link to={'/shoppinglist'}>Shopping List App</Link> <br/>
-            <Link to={'/bmicalculator'}>BMI Calculator</Link> <br/>
-            <Link to={'/colorpicker'}>Color Picker</Link>
-        </>
-    );
+      <nav className="homepage-links">
+        <Link className="homepage-link" to="/todolist">
+          To Do List App
+        </Link>
+        <Link className="homepage-link" to="/shoppinglist">
+          Shopping List App
+        </Link>
+        <Link className="homepage-link" to="/bmicalculator">
+          BMI Calculator
+        </Link>
+        <Link className="homepage-link" to="/colorpicker">
+          Color Picker
+        </Link>
+      </nav>
+    </main>
+  );
 }
 
 export default HomePage;
