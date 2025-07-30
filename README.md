@@ -16,7 +16,8 @@ The portfolio includes the following projects:
 
 ## 🛠 Technologies Used
 
-- **React** — For building UI components and managing state.
+- **React** — For building UI components and managing state. I used hooks like `useState()` to manage component state.
+- **React Router** — For navigation between project pages using `<BrowserRouter>`, `<Routes>`, `<Route>`, and `<Link>`.
 - **JavaScript, HTML, CSS** — Core web technologies for structure, styling, and logic.
 - **Vite** — A fast and modern build tool for React development.
 
@@ -26,7 +27,7 @@ The codebase is organized into separate folders for each project and related ass
 
 ## 🌟 Final Thoughts
 
-This collection represents an important step in my learning path, helping me grow from basic JavaScript and HTML/CSS towards mastering React's component-driven architecture.
+This collection represents an important step in my learning path, helping me grow from basic JavaScript and HTML/CSS towards mastering React's component-driven architecture and routing features.
 
 Feel free to explore the code, try out the projects, and share your feedback or suggestions!
 
