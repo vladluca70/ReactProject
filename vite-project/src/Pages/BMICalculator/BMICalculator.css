@@ -1,0 +1,68 @@
+.bmi-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.bmi-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #34495e;
+}
+
+.bmi-input {
+  display: block;
+  width: 80%;
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.bmi-input:focus {
+  border-color: #3498db;
+}
+
+.bmi-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bmi-button:hover {
+  background-color: #2980b9;
+}
+
+.bmi-result {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+.bmi-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.bmi-link:hover {
+  color: #216a94;
+}

@@ -1,46 +1,59 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./ShoppingList.css";
 
-function ShoppingList()
-{
-    const [items, setItems]=useState([]);
-    const [newItem, setNewItem]=useState("");
+function ShoppingList() {
+  const [items, setItems] = useState([]);
+  const [newItem, setNewItem] = useState("");
 
-    function handleItem(e)
-    {
-        setNewItem(e.target.value);
+  const handleItem = (e) => {
+    setNewItem(e.target.value);
+  };
+
+  const addNewItem = () => {
+    if (newItem.trim() !== "") {
+      setItems((i) => [...i, newItem.trim()]);
+      setNewItem("");
     }
+  };
 
-    function addNewItem()
-    {
-        setItems(i=>[...i, newItem])
-        setNewItem("");
-    }
+  const deleteItem = (indexToDelete) => {
+    const newItemsList = items.filter((_, index) => index !== indexToDelete);
+    setItems(newItemsList);
+  };
 
-    function deleteItem(indexToDelete){
-        const newItemsList=items.filter((item, index)=>index!==indexToDelete);
-        setItems(newItemsList);
-    }
+  return (
+    <main className="shopping-container">
+      <h2 className="shopping-title">Shopping List</h2>
 
-    return(
-        <>
-            {items.map((item,index)=>
-                <li key={index}>
-                        {item} 
-                        <button onClick={()=>deleteItem(index)}>Delete</button>
-                </li>
-            )}
+      <ul className="shopping-list">
+        {items.map((item, index) => (
+          <li key={index} className="shopping-item">
+            {item}
+            <button className="delete-button" onClick={() => deleteItem(index)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
 
-            <input placeholder="Write your item here"
-                   onChange={handleItem}
-                   value={newItem} 
-                />
-            <button onClick={addNewItem}>Add new item</button>
+      <div className="shopping-input-group">
+        <input
+          className="shopping-input"
+          placeholder="Write your item here"
+          onChange={handleItem}
+          value={newItem}
+        />
+        <button className="add-button" onClick={addNewItem}>
+          Add new item
+        </button>
+      </div>
 
-            <br/>
-            <Link to={'/'}>Go back home</Link>
-        </>
-    );
+      <Link className="shopping-link" to="/">
+        Go back home
+      </Link>
+    </main>
+  );
 }
 
 export default ShoppingList;

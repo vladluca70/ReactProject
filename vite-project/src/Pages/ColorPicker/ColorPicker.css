@@ -1,6 +1,12 @@
 .color-picker-container {
+  max-width: 400px;
+  margin: 60px auto;
   padding: 20px;
+  text-align: center;
   font-family: Arial, sans-serif;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .color-picker-section {
@@ -8,11 +14,29 @@
 }
 
 .color-input {
-  cursor: pointer;
   width: 100px;
   height: 50px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
 }
 
 .color-code {
   font-weight: bold;
+  margin-left: 10px;
+  color: #333;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #216a94;
 }

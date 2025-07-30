@@ -1,85 +1,80 @@
 import { useState } from "react";
-import "./ToDoList.css"
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+import "./ToDoList.css";
 
-function ToDoList()
-{
-    const [tasks, setTasks]= useState([]);
-    const [newTask, setNewTask]=useState("");
+function ToDoList() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState("");
 
-    function HandleNewTask(e)
-    {
-        setNewTask(e.target.value);
-    }
+  const HandleNewTask = (e) => {
+    setNewTask(e.target.value);
+  };
 
-    function AddNewTaskFunction() {
+  const AddNewTaskFunction = () => {
     if (newTask.trim() !== "") {
-        setTasks(t => [...t, newTask.trim()]);
-        setNewTask("");
+      setTasks((t) => [...t, newTask.trim()]);
+      setNewTask("");
     }
+  };
+
+  const DeleteFunction = (index) => {
+    const newTasksList = tasks.filter((_, i) => index !== i);
+    setTasks(newTasksList);
+  };
+
+  const MoveUpFunction = (index) => {
+    if (index > 0) {
+      const tasksList = [...tasks];
+      [tasksList[index - 1], tasksList[index]] = [tasksList[index], tasksList[index - 1]];
+      setTasks(tasksList);
     }
+  };
 
-    function DeleteFunction(index)
-    {
-        const newTasksList=tasks.filter((task, i)=>index!==i)
-        setTasks(newTasksList);
+  const MoveDownFunction = (index) => {
+    if (index < tasks.length - 1) {
+      const tasksList = [...tasks];
+      [tasksList[index], tasksList[index + 1]] = [tasksList[index + 1], tasksList[index]];
+      setTasks(tasksList);
     }
+  };
 
-    function MoveUpFunction(index) {
-        if (index > 0) {
-            const tasksList = [...tasks];
-            const temp = tasksList[index];
-            tasksList[index] = tasksList[index - 1];
-            tasksList[index - 1] = temp;
-            setTasks(tasksList);
-        }
-    }
+  return (
+    <main className="todo-container">
+      <h2 className="todo-title">To Do List</h2>
+      <hr className="todo-divider" />
 
+      <ul className="todo-list">
+        {tasks.map((task, index) => (
+          <li key={index} className="todo-item">
+            <span className="task-text">{task}</span>
+            <span className="task-actions">
+              <button onClick={() => DeleteFunction(index)}>Delete</button>
+              <button onClick={() => MoveUpFunction(index)}>↑</button>
+              <button onClick={() => MoveDownFunction(index)}>↓</button>
+            </span>
+          </li>
+        ))}
+      </ul>
 
-        function MoveDownFunction(index)
-    {
-    if (index < tasks.length - 1){
-        const tasksList=[...tasks];
-        const temp = tasksList[index];
+      <hr className="todo-divider" />
 
-        tasksList[index]=tasksList[index+1]
-        tasksList[index+1]=temp
+      <div className="todo-input-group">
+        <input
+          className="todo-input"
+          placeholder="Write here your new task"
+          onChange={HandleNewTask}
+          value={newTask}
+        />
+        <button className="add-task-button" onClick={AddNewTaskFunction}>
+          Add new task
+        </button>
+      </div>
 
-        setTasks(tasksList);
-        }
-    }
-
-    return (
-        <>
-        <div className="todo-container">
-            <h2>To Do List</h2>
-            <hr />
-            <ul>
-                {tasks.map((task, index) => (
-                    <li key={index}>
-                        <span>{task}</span>
-                        <span>
-                            <button onClick={() => DeleteFunction(index)}>Delete</button>
-                            <button onClick={() => MoveUpFunction(index)}>↑</button>
-                            <button onClick={() => MoveDownFunction(index)}>↓</button>
-                        </span>
-                    </li>
-                ))}
-            </ul>
-            <hr />
-            <input
-                placeholder="Write here your new task"
-                onChange={HandleNewTask}
-                value={newTask}
-            />
-            <br />
-            <button onClick={AddNewTaskFunction}>Add new task</button>
-            
-        </div>
-        <Link to={'/'} className="link-button">Go back home</Link>
-        </>
-    );
-
+      <Link className="todo-link" to="/">
+        Go back home
+      </Link>
+    </main>
+  );
 }
 
 export default ToDoList;
