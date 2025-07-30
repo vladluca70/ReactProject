@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ToDoList.css"
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function ToDoList()
 {
@@ -49,6 +50,7 @@ function ToDoList()
     }
 
     return (
+        <>
         <div className="todo-container">
             <h2>To Do List</h2>
             <hr />
@@ -72,7 +74,10 @@ function ToDoList()
             />
             <br />
             <button onClick={AddNewTaskFunction}>Add new task</button>
+            
         </div>
+        <Link to={'/'} className="link-button">Go back home</Link>
+        </>
     );
 
 }

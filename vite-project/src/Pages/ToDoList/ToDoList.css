@@ -40,7 +40,6 @@ body {
     align-items: center;
 }
 
-/* Inputul */
 .todo-container input {
     width: 100%;
     padding: 10px;
@@ -49,7 +48,6 @@ body {
     border: 1px solid #ccc;
 }
 
-/* Butoanele */
 .todo-container button {
     margin-left: 4px;
     padding: 6px 10px;
@@ -63,4 +61,19 @@ body {
 
 .todo-container button:hover {
     background-color: #2980b9;
+}
+
+.link-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50; /* verde */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #45a049;
 }

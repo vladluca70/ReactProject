@@ -1,15 +1,24 @@
 import { useState } from 'react'
 import './App.css'
-import ToDoList from "./ToDoList/ToDoList.jsx"
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import ToDoList from "./Pages/ToDoList/ToDoList.jsx"
+import HomePage from './Pages/HomePage/HomePage.jsx'
+import ShoppingList from "./Pages/ShoppingList/ShoppingList.jsx"
+import BMICalculator from "./Pages/BMICalculator/BMICalculator.jsx"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
-    <ToDoList/>
-
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<HomePage/>} />
+            <Route path='/todolist' element={<ToDoList/>}/>
+            <Route path='/shoppinglist' element={<ShoppingList/>}/>
+            <Route path='/bmicalculator' element={<BMICalculator/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
