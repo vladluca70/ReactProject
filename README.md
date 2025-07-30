@@ -2,6 +2,9 @@
 
 This repository showcases a collection of simple web projects I created as part of my journey to learn and get comfortable with **React**.
 
+🌐 **You can access the live version of the portfolio here:**  
+👉 [https://react-project-q6pf.vercel.app/](https://react-project-q6pf.vercel.app/)
+
 ## 🧠 Why React?
 
 I started this project to deepen my understanding of React, a popular JavaScript library for building interactive user interfaces. My goal was to practice React fundamentals by creating practical, small applications.
