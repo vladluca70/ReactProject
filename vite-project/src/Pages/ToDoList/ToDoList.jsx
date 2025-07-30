@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ToDoList.css";
 
 function ToDoList() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    ()=>{
+      const savedTasks=localStorage.getItem("tasks");
+      return savedTasks ? JSON.parse(savedTasks) : [];
+    }
+  );
+
   const [newTask, setNewTask] = useState("");
+
+  useEffect(
+    ()=>{
+      localStorage.setItem("tasks", JSON.stringify(tasks))
+    },[tasks]
+  );
 
   const HandleNewTask = (e) => {
     setNewTask(e.target.value);

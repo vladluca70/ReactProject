@@ -1,10 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./ShoppingList.css";
 
 function ShoppingList() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    ()=>{
+      const savedItems=localStorage.getItem("items");
+      return savedItems ? JSON.parse(savedItems) : []
+    }
+  );
   const [newItem, setNewItem] = useState("");
+
+  useEffect(
+    ()=>{
+      localStorage.setItem("items", JSON.stringify(items))
+    },[items]
+  );
 
   const handleItem = (e) => {
     setNewItem(e.target.value);
