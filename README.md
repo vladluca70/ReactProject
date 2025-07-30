@@ -3,7 +3,7 @@
 This repository showcases a collection of simple web projects I created as part of my journey to learn and get comfortable with **React**.
 
 🌐 **You can access the live version of the portfolio here:**  
-👉 [https://react-project-q6pf.vercel.app/](https://react-project-q6pf.vercel.app/)
+👉 [https://react-project-q6pf.vercel.app/](https://react-project-n2hu.vercel.app/)
 
 ## 🧠 Why React?
 
