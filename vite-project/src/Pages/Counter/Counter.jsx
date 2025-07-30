@@ -1,37 +1,38 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Counter.css"; 
 
+function Counter() {
+    const [number, setNumber] = useState(0);
 
-function Counter()
-{
-    const [number, setNumber]=useState(0);
-
-    function handleIncrement(){
-        setNumber(n=>n+1);
+    function handleIncrement() {
+        setNumber(n => n + 1);
     }
 
-    function handleDecrement(){
-        setNumber(n=>n-1);
+    function handleDecrement() {
+        setNumber(n => n - 1);
     }
 
-    function handleReset(){
+    function handleReset() {
         setNumber(0);
     }
 
-    useEffect(
-        ()=>{document.title=`The number is ${number}`},
-        [number]
-    );
+    useEffect(() => {
+        document.title = `The number is ${number}`;
+    }, [number]);
 
-    return(
-        <>
-            <div>
-                <h1>{number}</h1> <br/>
+    return (
+        <div className="counter-container">
+            <h1 className="counter-value">{number}</h1>
 
-                <button onClick={handleIncrement}>Increment</button>
-                <button onClick={handleReset}>Reset</button>
-                <button onClick={handleDecrement}>Decrement</button>
+            <div className="button-group">
+                <button className="btn increment" onClick={handleIncrement}>Increment</button>
+                <button className="btn reset" onClick={handleReset}>Reset</button>
+                <button className="btn decrement" onClick={handleDecrement}>Decrement</button>
             </div>
-        </>
+
+            <Link className="home-link" to={'/'}>Go back home</Link>
+        </div>
     );
 }
 

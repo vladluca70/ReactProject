@@ -1,0 +1,70 @@
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.counter-value {
+    font-size: 4rem;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.increment {
+    background-color: #10b981;
+}
+
+.increment:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+.decrement {
+    background-color: #ef4444;
+}
+
+.decrement:hover {
+    background-color: #dc2626;
+    transform: scale(1.05);
+}
+
+.reset {
+    background-color: #3b82f6;
+}
+
+.reset:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+.home-link {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #2563eb;
+}

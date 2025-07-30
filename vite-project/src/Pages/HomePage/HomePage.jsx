@@ -25,6 +25,9 @@ function HomePage() {
         <Link className="homepage-link" to={"/counter"}>
           Counter
         </Link>
+        <Link className="homepage-link" to={"/notes"}>
+          Notes
+        </Link>
         
       </nav>
     </main>
